@@ -6,6 +6,8 @@ Initailize cluster
 
 `kubeadm init --token=102952.1a7dd4cc8d1f4cc5`{{execute HOST1}}
 
+If you have stale setup you can run `kubeadm reset`{{execute HOST1}}
+
 Token info 
 
 `kubeadm token list`{{execute}}

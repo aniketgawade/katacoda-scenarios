@@ -28,8 +28,7 @@
             "text": "finish.md"
         },
         "assets": {
-          "host01": [{"file": "dashboard.yaml", "target": "/root"}],
-          "host01": [{"file": "kube101-demo.yaml", "target": "/root"}]
+          "host01": [{"file": "dashboard.yaml", "target": "/root"}, {"file": "kube101-demo.yaml", "target": "/root"}]
         }
     },
     "environment": {
