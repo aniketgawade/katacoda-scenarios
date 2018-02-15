@@ -1,9 +1,8 @@
-Once the Master has initialised, additional nodes can join the cluster as long as they have the correct token. The tokens can be managed via `kubeadm token`, for example `kubeadm token list`{{execute}}.
 
-## Task
+## Dashboard install
 
-One the second node, run the command to join the cluster providing the IP address of the Master node.
+Deploy the dashboard yaml with the command `kubectl apply -f dashboard.yaml`{{execute HOST1}}
 
-`kubeadm join --token=102952.1a7dd4cc8d1f4cc5 [[HOST_IP]]:6443`{{execute HOST2}}
+The dashboard is deployed into the _kube-system_ namespace. View the status of the deployment with `kubectl get pods -n kube-system`{{execute HOST1}}
 
-This is the same command provided after the Master has been initialised.
+When the dashboard was deployed, it was assigned a NodePort of 30000. This makes the dashboard available to outside of the cluster and viewable at https://[[HOST2_SUBDOMAIN]]-30000-[[KATACODA_HOST]].environments.katacoda.com/

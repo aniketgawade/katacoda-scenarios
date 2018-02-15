@@ -1,38 +1,22 @@
 {
-    "pathwayTitle": "Kubernetes",
-    "title": "Getting Started With Kubeadm",
-    "description": "Learn how to deploy a Kubeadm cluster",
+    "pathwayTitle": "Kubebnetes 101",
+    "title": "Kube demo 101",
+    "description": "Great way to start kubernetes",
     "difficulty": "intermediate",
     "time": "10-15 minutes",
     "details": {
         "steps": [
             {
-                "title": "Step 1 - Initialise Master",
+                "title": "Step 1 - Initialize k8s, create cluster and get ready",
                 "text": "step1.md"
             },
             {
-                "title": "Step 2 - Join Cluster",
+                "title": "Step 2 - Install dashboard",
                 "text": "step2.md"
             },
             {
-                "title": "Step 3 - View Nodes",
+                "title": "Step 3 - Run presentation in k8s",
                 "text": "step3.md"
-            },
-            {
-                "title": "Step 4 - Deploy Container Networking Interface (CNI)",
-                "text": "step4.md"
-            },
-            {
-                "title": "Step 5 - Deploy Pod",
-                "text": "step5.md"
-            },
-            {
-                "title": "Step 6 - Work Remotely",
-                "text": "step6.md"
-            },
-            {
-                "title": "Step 7 - Deploy Dashboard",
-                "text": "step7.md"
             }
         ],
         "intro": {

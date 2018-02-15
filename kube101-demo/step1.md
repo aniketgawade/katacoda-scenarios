@@ -1,11 +1,38 @@
-Kubeadm has been installed on the nodes. Packages are available for Ubuntu 16.04+, CentOS 7 or HypriotOS v1.0.1+.
 
-The first stage of initialising the cluster is to launch the master node. The master is responsible for running the control plane components, etcd and the API server. Clients will communicate to the API to schedule workloads and manage the state of the cluster.
 
-## Task
+## Setup
 
-The command below will initialise the cluster with a known token to simplify the following steps.
+Initailize cluster
 
 `kubeadm init --token=102952.1a7dd4cc8d1f4cc5`{{execute HOST1}}
 
-In production, it's recommend to exclude the token causing kubeadm to generate one on your behalf.
+Token info 
+
+`kubeadm token list`{{execute}}
+
+Setting environment created by kubeadm
+
+```
+sudo cp /etc/kubernetes/admin.conf $HOME/
+sudo chown $(id -u):$(id -g) $HOME/admin.conf
+export KUBECONFIG=$HOME/admin.conf
+```{{execute HOST1}}
+
+
+Lets join our node
+
+`kubeadm join --token=102952.1a7dd4cc8d1f4cc5 [[HOST_IP]]:6443`{{execute HOST2}}
+
+Let check k8s pods
+
+`kubectl get pod -n kube-system`{{execute HOST1}}
+
+Check if node is connected to master
+
+
+`kubectl get nodes`{{execute HOST1}}
+
+This setup requires weave CNI 
+
+`kubectl apply -f /opt/weave-kube`{{execute HOST1}}
+
