@@ -40,6 +40,10 @@ Exec into container
 `kubectl exec -it {pod_id} bash`{{execute HOST1}}
 
 
+Get all
+
+`kubectl get pods,deployment,service`{{execute HOST1}}
+
 Lets head back to our presentation:
 
 https://[[HOST2_SUBDOMAIN]]-30003-[[KATACODA_HOST]].environments.katacoda.com/#frame3390
