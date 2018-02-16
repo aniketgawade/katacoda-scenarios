@@ -9,7 +9,7 @@ Deploy presentation  `kubectl apply -f kube101-demo.yaml`{{execute HOST1}}
 
 Lets check if our pods are up `kubectl get pods`{{execute HOST1}}
 
-We declared NodePort as 33000 so our service should be listening on https://[[HOST2_SUBDOMAIN]]-30003-[[KATACODA_HOST]].environments.katacoda.com/
+We declared NodePort as 30003 so our service should be listening on https://[[HOST2_SUBDOMAIN]]-30003-[[KATACODA_HOST]].environments.katacoda.com/
 
 Services: 
 
