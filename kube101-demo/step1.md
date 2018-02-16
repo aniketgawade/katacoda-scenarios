@@ -38,6 +38,10 @@ This setup requires weave CNI
 
 `kubectl apply -f /opt/weave-kube`{{execute HOST1}}
 
-Check component status
+Check component status:
 
 `kubectl get cs`{{execute HOST1}}
+
+Logs:
+
+`kubectl logs kube-apiserver-master -n kube-system`{{execute HOST1}}
