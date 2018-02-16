@@ -27,3 +27,6 @@ Lets delete all our pods
 
 `kubectl get pods | awk '{print $1}' | egrep -v NAME | xargs kubectl delete pod`{{execute HOST1}}
 
+Let go back to our presentation:
+
+https://[[HOST2_SUBDOMAIN]]-30003-[[KATACODA_HOST]].environments.katacoda.com/#frame3390
