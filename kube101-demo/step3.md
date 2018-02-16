@@ -27,6 +27,19 @@ Lets delete all our pods
 
 `kubectl get pods | awk '{print $1}' | egrep -v NAME | xargs kubectl delete pod`{{execute HOST1}}
 
+Redis:
+
+
+`kubectl run redis --image=redis --replicas=3 --port=6379`{{execute HOST1}}
+
+`kubectl expose deployment/redis --port=8099 --target-port=6379`{{execute HOST1}}
+
+
+Exec into container
+
+`kubectl exec -it {pod_id} bash`{{execute HOST1}}
+
+
 Lets head back to our presentation:
 
 https://[[HOST2_SUBDOMAIN]]-30003-[[KATACODA_HOST]].environments.katacoda.com/#frame3390
